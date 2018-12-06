@@ -15,7 +15,7 @@ namespace ConsoleApplication1
             Console.WriteLine(errorMsg);
             if (con != null)
             {
-                Console.WriteLine("In database {0}", con.Database);
+                Console.WriteLine("In database {0} ", con.Database);
                 OdbcCommand command = con.CreateCommand();
                 command.CommandText = "SELECT name FROM sysobjects WHERE type='U' ORDER BY name";
                 OdbcDataReader reader = command.ExecuteReader();
